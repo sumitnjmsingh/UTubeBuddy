@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+youtube-transcript-api
+langchain
+faiss-cpu
+langchain-community
+langchain-huggingface
+rag_pipeline

@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from youtube_transcript_api import YouTubeTranscriptApi
 from youtube_transcript_api._errors import TranscriptsDisabled
+from rag_pipeline import create_rag_pipeline
 import logging
 import uvicorn
 
@@ -30,6 +31,9 @@ async def ask_question(
     video_id: str = Query(..., description="YouTube video ID"),
     question: str = Query(..., description="User's question"),
 ) -> QAResponse:
+    """
+    Given a YouTube video ID and a question, fetches the transcript and answers the question using a RAG pipeline.
+    """
     try:
         logger.info(f"Fetching transcript for video_id={video_id}")
         transcript = YouTubeTranscriptApi.get_transcript(video_id)
@@ -40,7 +44,7 @@ async def ask_question(
             return QAResponse(answer="No transcript available for this video.")
 
         logger.info("Transcript fetched successfully. Processing question...")
-        answer = "This is a placeholder answer. Replace with actual RAG pipeline logic."
+        answer = create_rag_pipeline(transcript_text, question)
         logger.info("Answer generated successfully.")
         return QAResponse(answer=answer or "No answer could be generated.")
     except TranscriptsDisabled:

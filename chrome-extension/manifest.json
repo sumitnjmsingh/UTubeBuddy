@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube QnA Assistant",
+  "version": "1.0",
+  "description": "Ask questions about YouTube videos",
+  "permissions": ["tabs", "activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "host_permissions": [
+    "*://*/*"
+  ]
+}

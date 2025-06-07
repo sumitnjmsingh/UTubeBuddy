@@ -1,0 +1,128 @@
+:root {
+  --background-color: #f9f9f9;
+  --text-color: #333;
+  --primary-color: #0056b3;
+  --secondary-color: #666;
+  --input-background: #fff;
+  --result-background: #fff;
+  --border-color: #ccc;
+}
+
+body.dark-theme {
+  --background-color: #1e1e1e;
+  --text-color: #f9f9f9;
+  --primary-color: #4a90e2;
+  --secondary-color: #aaa;
+  --input-background: #2c2c2c;
+  --result-background: #2c2c2c;
+  --border-color: #555;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.container {
+  width: 320px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 1.4rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  display: flex;
+  gap: 0.5rem;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 0.5rem;
+  background-color: var(--input-background);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+button {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.result {
+  margin-top: 1rem;
+  background-color: var(--result-background);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 0.5rem;
+  min-height: 60px;
+  max-height: 200px;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+.result {
+  scrollbar-width: thin;           
+  scrollbar-color: #888 transparent;
+}
+
+.result::-webkit-scrollbar {
+  width: 4px; 
+}
+
+.result::-webkit-scrollbar-track {
+  background: transparent; 
+}
+
+.result::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 2px;
+}
+
+.result::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+pre#answer {
+  margin: 0;
+  white-space: pre-wrap; 
+  word-wrap: break-word;
+  font-size: 0.9rem;
+}
+
+#toggle-theme {
+  margin-top: 10px;
+  background: none;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+#toggle-theme:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}

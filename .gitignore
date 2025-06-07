@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*.log
+*.sqlite3
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv/
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# Node modules
+node_modules/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+*.whl
+
+# Environment files
+.env
+.env.*
+*.env
+
+# Deployment
+deployment/*.log
+deployment/*.pid
+
+# Ignore frontend build artifacts (if any)
+chrome-extension/dist/
+chrome-extension/build/
+
+# Ignore any temporary files
+*.tmp
+*.temp
+*.cache

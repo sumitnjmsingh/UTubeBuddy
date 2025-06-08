@@ -62,9 +62,7 @@
 
 3. **Load unpacked extension**:
 
-   ```bash
    click "Load unpacked" and select the chrome-extension folder.
-   ```
 
 4. **Use the Extension**:
 

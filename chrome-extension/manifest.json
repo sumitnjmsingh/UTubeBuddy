@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "YouTube QnA Assistant",
+  "name": "UTube Buddy",
   "version": "1.0",
   "description": "Ask questions about YouTube videos",
   "permissions": ["tabs", "activeTab", "scripting"],
